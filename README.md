@@ -27,14 +27,14 @@ A professional and minimalistic expense tracking web application with Google She
 
 ```
 expense-tracker/
-├── credentials.json     # Google Sheets API configuration
-├── server.js           # Backend server implementation
-├── package.json        # Project dependencies and scripts
-├── public/             # Frontend assets
-│   ├── index.html      # Main HTML file
-│   ├── styles.css      # Styling
-│   └── script.js       # Frontend JavaScript
-└── README.md           # Project documentation
+├── credentials.json.example # Google Sheets API configuration (copy to credentials.json)
+├── server.js                # Backend server implementation
+├── package.json             # Project dependencies and scripts
+├── public/                  # Frontend assets
+│   ├── index.html           # Main HTML file
+│   ├── styles.css           # Styling
+│   └── script.js            # Frontend JavaScript
+└── README.md                # Project documentation
 ```
 
 ## Prerequisites
@@ -68,25 +68,25 @@ expense-tracker/
    F1: Note
    ```
 
-2. Get your Google Sheets API key:
+2. Set up Google Cloud Project and Service Account:
    - Go to the [Google Cloud Console](https://console.cloud.google.com/)
    - Create a new project or select an existing one
    - Enable the Google Sheets API
-   - Create credentials (API Key)
-   - Copy the API key
+   - Create a service account
+   - Download the JSON key file
+   - Rename the downloaded file to `credentials.json` and place it in the project root
 
-3. Update the configuration in `server.js`:
+3. Update the configuration in `server.js` with your Spreadsheet ID:
    ```javascript
    const GOOGLE_SHEETS_CONFIG = {
-       apiKey: 'YOUR_API_KEY_HERE',
        spreadsheetId: 'YOUR_SPREADSHEET_ID_HERE',
        range: 'Sheet1!A:F'
    };
    ```
 
-4. Share your Google Sheet:
+4. Share your Google Sheet with the service account email:
    - Click the "Share" button in your Google Sheet
-   - Change the sharing settings to "Anyone with the link can view"
+   - Add the service account email (found in credentials.json) with editor permissions
 
 ## Usage
 
