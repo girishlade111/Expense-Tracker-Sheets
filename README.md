@@ -136,7 +136,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-**Girish Lade**
+Built by Girish Lade · https://ladestack.in
 
 - GitHub: [@girishlade111](https://github.com/girishlade111)
 - Email: girishlade111@gmail.com
